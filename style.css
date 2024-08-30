@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:inherit;
+  font-weight: inherit;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  height: 100%;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: system-ui, -apple-system, 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.app {
+  max-width: 68.75rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template: auto / 35% 1fr;
+  gap: 20px;
+  padding: 20px 16px;
+}
+
+#wifi-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+  gap: .3125rem;
+}
+
+.form-col:last-child {
+  margin-top: 1.25rem;
+  justify-content: center;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  border: .0625rem solid #cdcdcd;
+  border-radius: .375rem;
+  outline: none;
+  padding: 0 .625rem;
+}
+
+button {
+  font-size: 1.0625rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: blue;
+  height: 50px;
+  color: #fff;
+  border-radius: .375rem;
+  transition: .2s;
+}
+
+button:hover {
+  opacity: .8;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+select {
+  height: 2.5rem;
+  border: .0625rem solid #cdcdcd;
+  border-radius: .375rem;
+  outline: none;
+  padding: 0 .625rem;
+}
+
+.qr {
+  display: flex;
+  justify-content: center;
+}
+
+#qrcode-container {
+  position: relative;
+  padding: 0 25%;
+  overflow: hidden;
+}
+
+#qrcode-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    max-width: 68.75rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template: auto / 1fr;
+    gap: 20px;
+    padding: 20px 16px;
+  }
+
+  #qrcode-container {
+    width: 100%;
+    padding: 25% 0;
+  }
+}
